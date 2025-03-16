@@ -1,5 +1,14 @@
 # import os
+# os.system("ls")
+
 import subprocess
 
+command="uname"
+commandArgument="-a"
+print(f'Gathering system information with command: {command} {commandArgument}')
+subprocess.run([command,commandArgument])
 
-subprocess.run(["ls","-l"])
+command="ps"
+commandArgument="-x"
+print(f'Gathering active process information with command: {command} {commandArgument}')
+subprocess.run([command,commandArgument])
